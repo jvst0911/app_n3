@@ -1,16 +1,16 @@
 # app_n3
 
-A new Flutter project.
+Projeto desenvolvido durante as aulas de Desenvolvimento Mobile do semestre 20212 para a faculdade Católica SC de Joinville.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Neste projeto serão utilizados as seguintes tecnologias:
 
-A few resources to get you started if this is your first Flutter project:
+Flutter;
+  -material.dart
+Dart;
+Aws ElastiCache Redis;
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A idéia do projeto é uma agenda de contatos com armazenamento na Aws utilizando o Redis.
+O projeto tem duas telas principais, A primeira sendo a lista de contatos e a segunda uma tela para exibir e editar os contatos.
+Conforme fomos projetando o app, decidimos que seria necessário realizar uma tela onde o usuário poderá cadastrar seus contatos tendo a obrigatoriedade de informar o nome e um email.
