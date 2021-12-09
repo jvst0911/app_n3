@@ -7,7 +7,6 @@ Projeto desenvolvido durante as aulas de Desenvolvimento Mobile do semestre 2021
 Neste projeto serão utilizados as seguintes tecnologias:
 
 Flutter;
-  -material.dart
 Dart;
 Aws ElastiCache Redis;
 
