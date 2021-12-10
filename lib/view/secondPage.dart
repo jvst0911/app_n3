@@ -1,3 +1,4 @@
+import 'package:app_n3/components/dialog.dart';
 import 'package:app_n3/database/databaseMethods.dart';
 import 'package:flutter/material.dart';
 
@@ -12,11 +13,11 @@ class _SecodPageState extends State<SecodPage> {
   DBHelper db = new DBHelper();
 
   List<String> nomes = [];
-  TextEditingController _controller = new TextEditingController();
 
   @override
   void initState() {
     nomes = db.getContatos();
+    super.initState();
   }
 
   @override
@@ -60,48 +61,18 @@ class _SecodPageState extends State<SecodPage> {
             context: context,
             builder: (context) {
               return Dialog(
-                  child: Container(
-                height: 180,
-                width: 200,
-                child: Column(
-                  children: [
-                    TextFormField(
-                      decoration: InputDecoration(
-                        labelText: 'Nome do Contato',
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(width: 3, color: Colors.black),
-                          // borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                      controller: _controller,
-                    ),
-                    SizedBox(
-                      height: 60,
-                    ),
-                    TextButton.icon(
-                      onPressed: () {
-                        addContato(_controller.text);
-                      },
-                      icon: Icon(Icons.add),
-                      label: Text("Adicionar"),
-                    )
-                  ],
+                child: DialogSimples(
+                  lista: nomes,
                 ),
-              ));
+              );
             },
           );
         },
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+        ),
         backgroundColor: Colors.black,
       ),
-    );
-  }
-
-  addContato(String nome) {
-    setState(
-      () {
-        nomes.add(nome);
-      },
     );
   }
 }
